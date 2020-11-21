@@ -1,0 +1,283 @@
+<svg>
+  <svg id="main" pointer-events="visible">
+    <rect id="background" />
+    <text id="gregLabel" class="defaultText" x="5%" y="40">Solar</text>
+    <text id="gregDate" class="mainText" x="5%" y="15%+40"/>
+    <text id="lunarLabel" class="defaultText" x="5%" y="35%+40">Lunar</text>
+    <text id="lunarDate" class="mainText" x="5%" y="50%+40"/>
+    <use id="todayButton" href="#push-button" y="80%" height="20%" fill="fb-green" font-family="System-Regular">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Today" />
+      <set href="#text" attributeName="fill" to="fb-white" />
+      <set href="#text" attributeName="y" to="10" />
+    </use>
+  </svg>
+  <svg id="gregSetter" display="none">
+    <use id="gregYearTumbler" class="dateTumbler" href="#tumblerview"
+         x="2%" height="80%" width="48%">
+      <use class="tumblerItem" href="#tumbler-item"><text>1970</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1971</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1972</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1973</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1974</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1975</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1976</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1977</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1978</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1979</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1980</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1981</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1982</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1983</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1984</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1985</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1986</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1987</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1988</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1989</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1990</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1991</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1992</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1993</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1994</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1995</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1996</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1997</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1998</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1999</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2000</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2001</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2002</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2003</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2004</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2005</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2006</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2007</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2008</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2009</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2010</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2011</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2012</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2013</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2014</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2015</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2016</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2017</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2018</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2019</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2020</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2021</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2022</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2023</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2024</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2025</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2026</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2027</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2028</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2029</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2030</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2031</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2032</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2033</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2034</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2035</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2036</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2037</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2038</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2039</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2040</text></use>
+    </use>
+    <use id="gregMonthTumbler" class="dateTumbler" href="#tumblerview"
+         x="50%" height="80%" width="24%">
+      <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>04</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>05</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>06</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>07</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>08</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>09</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>10</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>11</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
+    </use>
+    <use id="gregDateTumbler" class="dateTumbler" href="#tumblerview"
+         x="74%" height="80%" width="24%">
+      <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>04</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>05</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>06</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>07</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>08</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>09</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>10</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>11</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>13</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>14</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>15</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>16</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>17</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>18</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>19</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>20</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>21</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>22</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>23</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>24</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>25</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>26</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>27</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>28</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>29</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>31</text></use>
+    </use>
+    <use id="gregUseButton" href="#push-button" y="80%" height="20%"
+         fill="fb-green" font-family="System-Regular">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Use" />
+      <set href="#text" attributeName="fill" to="fb-white" />
+      <set href="#text" attributeName="y" to="10" />
+    </use>
+  </svg>
+  <svg id="lunarSetter" display="none">
+    <use id="lunarYearTumbler" class="dateTumbler" href="#tumblerview"
+         x="0%" height="80%" width="40%">
+      <use class="tumblerItem" href="#tumbler-item"><text>1970</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1971</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1972</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1973</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1974</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1975</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1976</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1977</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1978</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1979</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1980</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1981</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1982</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1983</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1984</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1985</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1986</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1987</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1988</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1989</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1990</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1991</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1992</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1993</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1994</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1995</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1996</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1997</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1998</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1999</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2000</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2001</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2002</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2003</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2004</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2005</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2006</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2007</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2008</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2009</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2010</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2011</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2012</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2013</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2014</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2015</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2016</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2017</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2018</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2019</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2020</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2021</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2022</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2023</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2024</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2025</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2026</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2027</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2028</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2029</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2030</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2031</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2032</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2033</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2034</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2035</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2036</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2037</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2038</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2039</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2040</text></use>
+    </use>
+    <use id="lunarMonthTumbler" class="dateTumbler" href="#tumblerview"
+         x="40%" height="80%" width="20%">
+      <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>04</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>05</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>06</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>07</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>08</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>09</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>10</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>11</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
+    </use>
+    <use id="lunarDateTumbler" class="dateTumbler" href="#tumblerview"
+         x="60%" height="80%" width="20%">
+      <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>04</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>05</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>06</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>07</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>08</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>09</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>10</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>11</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>13</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>14</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>15</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>16</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>17</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>18</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>19</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>20</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>21</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>22</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>23</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>24</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>25</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>26</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>27</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>28</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>29</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
+    </use>
+    <use id="lunarLeapTumbler" class="dateTumbler" href="#tumblerview"
+         x="80%" y="30%" height="20%" width="20%">
+      <use class="tumblerItem" href="#tumbler-item"><text>-</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>lp</text></use>
+    </use>
+    <use id="lunarUseButton" href="#push-button" y="80%" height="20%"
+         fill="fb-green" font-family="System-Regular">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Use" />
+      <set href="#text" attributeName="fill" to="fb-white" />
+      <set href="#text" attributeName="y" to="10" />
+    </use>
+  </svg>
+</svg>
