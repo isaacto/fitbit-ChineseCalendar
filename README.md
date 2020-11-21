@@ -20,3 +20,8 @@ can be found at:
 The latest version can be installed from the Fitbit gallery app site with:
 
   https://gallery.fitbit.com/details/6343a53c-1978-4508-bdbc-44468f363990
+
+Change log
+
+  * 0.2.0: Chinese year name, make swipe direction natural
+  * 0.1.0: Initial version
