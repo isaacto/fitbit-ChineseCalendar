@@ -5,6 +5,9 @@
 // https://github.com/wolfhong/LunarCalendar/blob/master/lunarcalendar/converter.py
 
 import document from "document";
+import * as fs from "fs";
+import * as messaging from "messaging";
+import { preferences } from "user-settings";
 
 const mainSect = document.getElementById("main");
 const gregLabel = document.getElementById("gregLabel");
@@ -37,6 +40,46 @@ const WEEKDAYS = [
   "Fri",
   "Sat",
 ];
+
+const MONTHS = {
+  "Digits": [
+    "01-", "02-", "03-", "04-", "05-", "06-",
+    "07-", "08-", "09-", "10-", "11-", "12-",
+  ],
+  "Chinese": [
+    "正月", "二月", "三月", "四月", "五月", "六月",
+    "七月", "八月", "九月", "十月", "十一月", "十二月",
+  ],
+}
+
+const DAYS = {
+  "Digits": [
+    "01", "02", "03", "04", "05", "06", "07", "08", "09", "10",
+    "11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+    "21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
+  ],
+  "Chinese": [
+    "初一", "初二", "初三", "初四", "初五", "初六", "初七", "初八", "初九", "初十",
+    "十一", "十二", "十三", "十四", "十五", "十六", "十七", "十八", "十九", "二十",
+    "廿一", "廿二", "廿三", "廿四", "廿五", "廿六", "廿七", "廿八", "廿九", "三十",
+  ],
+}
+
+const LEAPS = {
+  "Digits": ["-", "-*"],
+  "Chinese": ["年", "年潤"],
+}
+
+let lunarChar = "Digits";
+
+try {
+  let saved = fs.readFileSync("settings.json", "json");
+  lunarChar = saved[0];
+  LEAPS[lunarChar][0];
+} catch (err) {
+  lunarChar = "Digits";
+}
+console.log(lunarChar);
 
 // Add a leading "0" to date part if needed
 function to2(s) {
@@ -261,7 +304,10 @@ function updateGreg(gregDate) {
 // Update to display a lunar date
 function updateLunar(lunarDate) {
   let [yl, ml, dl, ll] = lunarDate;
-  lunarDateLabel.text = yl + "-" + to2(ml) + (ll ? "*" : "") + "-" + to2(dl);
+  lunarDateLabel.text = "" + yl +
+    LEAPS[lunarChar][ll ? 1 : 0] +
+    MONTHS[lunarChar][ml - 1] +
+    DAYS[lunarChar][dl - 1];
 }
 
 let curr;
@@ -345,4 +391,18 @@ lunarUseButton.onclick = function() {
   updateCurr();
   lunarSetterSect.style.display = "none";
   mainSect.style.display = "inline";
+}
+
+messaging.peerSocket.addEventListener("message", (evt) => {
+  if (evt.data.key == "lunarChar") {
+    if (!evt.data.value)
+      return;
+    lunarChar = evt.data.value["values"][0]["name"];
+    updateCurr();
+  }
+  saveSettings();
+});
+
+function saveSettings() {
+  fs.writeFileSync("settings.json", [lunarChar], "json");
 }
