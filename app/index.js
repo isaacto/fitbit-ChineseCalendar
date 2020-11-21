@@ -347,13 +347,13 @@ mainSect.onmouseup = function(evt) {
   let yMove = evt.screenY - downY;
   let diff = 0;
   if (yMove < -60) {
-    diff = -30;
-  } else if (yMove > 60) {
     diff = 30;
+  } else if (yMove > 60) {
+    diff = -30;
   } else if (xMove < -60) {
-    diff = -1;
-  } else if (xMove > 60) {
     diff = 1;
+  } else if (xMove > 60) {
+    diff = -1;
   } else if (inBBoxY(evt, gregDateLabel) || inBBoxY(evt, gregLabel)) {
     mainSect.style.display = "none";
     let [y, m, d] = curr;
