@@ -8,6 +8,10 @@ calendar.
   * Set solar or lunar calendar by tapping on the dates.
   * Move to today by the button.
 
+Unluckily, some of the year names are not displayable in Versa if
+written correctly, so they are substituted with a character looking
+similar.  You're warned.
+
 This is an open-source project.  The source code and latest development
 can be found at:
 

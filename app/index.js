@@ -41,6 +41,9 @@ const WEEKDAYS = [
   "Sat",
 ];
 
+const STEMS = "甲乙丙丁戊己庚辛壬葵";  // 癸 not displayable in Versa
+const BRANCHES = "子丑寅卯辰巳午未申酉戊亥"; // 戌 not displayable in Versa
+
 const MONTHS = {
   "Digits": [
     "01-", "02-", "03-", "04-", "05-", "06-",
@@ -304,6 +307,8 @@ function updateGreg(gregDate) {
 // Update to display a lunar date
 function updateLunar(lunarDate) {
   let [yl, ml, dl, ll] = lunarDate;
+  if (lunarChar != "Digits")
+    yl = STEMS[(yl + 6) % 10] + BRANCHES[(yl + 8) % 12];
   lunarDateLabel.text = "" + yl +
     LEAPS[lunarChar][ll ? 1 : 0] +
     MONTHS[lunarChar][ml - 1] +
