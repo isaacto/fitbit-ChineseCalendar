@@ -3,8 +3,8 @@ Chinese Calendar Converter
 Display the same day in both the western (Gregorian) and Chinese lunar
 calendar.
 
-  * Move forward and backward by 1 day or 30 days by swiping on the
-    dates.
+  * Move forward and backward by 1 day, 7 days, 30 days or 365 days by
+    swiping on the dates.
   * Set solar or lunar calendar by tapping on the dates.
   * Move to today by the button.
 
@@ -23,5 +23,6 @@ The latest version can be installed from the Fitbit gallery app site with:
 
 Change log
 
+  * 0.2.1: Flexible swipe, prevent overflow
   * 0.2.0: Chinese year name, make swipe direction natural
   * 0.1.0: Initial version
