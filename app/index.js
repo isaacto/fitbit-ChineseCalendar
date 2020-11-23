@@ -341,18 +341,31 @@ mainSect.onmousedown = function(evt) {
   downY = evt.screenY;
 };
 
+let DIFF_TRANS = [0, 1, 7, 30, 365];
+
 mainSect.onmouseup = function(evt) {
   let xMove = evt.screenX - downX;
   let yMove = evt.screenY - downY;
   let diff = 0;
   if (yMove < -60) {
-    diff = 30;
+    diff += 3;
   } else if (yMove > 60) {
-    diff = -30;
-  } else if (xMove < -60) {
-    diff = 1;
+    diff -= 3;
+  }
+  if (xMove < -60) {
+    diff += 1;
   } else if (xMove > 60) {
-    diff = -1;
+    diff -= 1;
+  }
+  if (diff) {
+    diff = diff / Math.abs(diff) * DIFF_TRANS[Math.abs(diff)];
+    let intCurr = greg2Int(curr) + diff;
+    if (intCurr < LUNAR_START[0])
+      intCurr = LUNAR_START[0];
+    if (intCurr > LUNAR_START[LUNAR_START.length - 1])
+      intCurr = LUNAR_START[LUNAR_START.length - 1];
+    curr = int2Greg(intCurr);
+    updateCurr();
   } else if (inBBoxY(evt, gregDateLabel) || inBBoxY(evt, gregLabel)) {
     mainSect.style.display = "none";
     let [y, m, d] = curr;
@@ -360,7 +373,6 @@ mainSect.onmouseup = function(evt) {
     gregMonthTumbler.value = m - 1;
     gregDateTumbler.value = d - 1;
     gregSetterSect.style.display = "inline";
-    return;
   } else if (inBBoxY(evt, lunarDateLabel) || inBBoxY(evt, lunarLabel)) {
     mainSect.style.display = "none";
     let [y, m, d, l] = greg2Lunar(curr);
@@ -369,11 +381,6 @@ mainSect.onmouseup = function(evt) {
     lunarDateTumbler.value = d - 1;
     lunarLeapTumbler.value = l ? 1 : 0;
     lunarSetterSect.style.display = "inline";
-    return;
-  }
-  if (diff) {
-    curr = int2Greg(greg2Int(curr) + diff);
-    updateCurr();
   }
 };
 
