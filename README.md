@@ -1,4 +1,4 @@
-Chinese Calendar Converter
+Chinese Calendar
 
 Display the same day in both the western (Gregorian) and Chinese lunar
 calendar.
@@ -15,14 +15,15 @@ similar.  You're warned.
 This is an open-source project.  The source code and latest development
 can be found at:
 
-  https://github.com/isaacto/fitbit-LunarConvert
+  https://github.com/isaacto/fitbit-ChineseCalendar
 
 The latest version can be installed from the Fitbit gallery app site with:
 
-  https://gallery.fitbit.com/details/6343a53c-1978-4508-bdbc-44468f363990
+  https://gallery.fitbit.com/details/5971756c-5a3c-4fb3-bbb9-b8079fde9e81
 
 Change log
 
+  * 0.2.2: Renamed as Chinese Calendar
   * 0.2.1: Flexible swipe, prevent overflow
   * 0.2.0: Chinese year name, make swipe direction natural
   * 0.1.0: Initial version

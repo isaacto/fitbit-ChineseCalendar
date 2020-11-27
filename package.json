@@ -1,6 +1,6 @@
 {
-  "name": "lunar-conversion",
-  "version": "0.2.1",
+  "name": "chinese-calendar",
+  "version": "0.2.2",
   "private": true,
   "license": "Apache",
   "devDependencies": {
@@ -8,9 +8,9 @@
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "6343a53c-1978-4508-bdbc-44468f363990",
+    "appUUID": "5971756c-5a3c-4fb3-bbb9-b8079fde9e81",
     "appType": "app",
-    "appDisplayName": "Lunar Convert",
+    "appDisplayName": "Chinese Calendar",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
