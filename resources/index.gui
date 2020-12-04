@@ -2,6 +2,7 @@
   <svg id="main" pointer-events="visible">
     <rect id="background" />
     <text id="gregLabel" class="defaultText" x="5%" y="40">Solar</text>
+    <text id="solarTerm" class="defaultText" x="99%" y="40" text-anchor="end"></text>
     <text id="gregDate" class="mainText" x="5%" y="15%+40"/>
     <text id="lunarLabel" class="defaultText" x="5%" y="35%+40">Lunar</text>
     <text id="lunarDate" class="mainText" x="5%" y="50%+40"/>

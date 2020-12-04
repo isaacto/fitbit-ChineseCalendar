@@ -4,6 +4,8 @@
 
 // https://github.com/wolfhong/LunarCalendar/blob/master/lunarcalendar/converter.py
 
+// Solar term is made to match that reported by HKO.
+
 import document from "document";
 import * as fs from "fs";
 import * as messaging from "messaging";
@@ -13,6 +15,7 @@ const mainSect = document.getElementById("main");
 const gregLabel = document.getElementById("gregLabel");
 const lunarLabel = document.getElementById("lunarLabel");
 const gregDateLabel = document.getElementById("gregDate");
+const solarTermLabel = document.getElementById("solarTerm");
 const lunarDateLabel = document.getElementById("lunarDate");
 const todayButton = document.getElementById("todayButton");
 
@@ -71,6 +74,21 @@ const DAYS = {
 const LEAPS = {
   "Digits": ["-", "-*"],
   "Chinese": ["年", "年潤"],
+}
+
+const TERM_NAMES = {
+  "Digits":  [
+    "M.Cold", "S.Cold", "Sp.Commences", "Sp.Showers", "I.Waken", "V.Equinox",
+    "B&Clear", "C.Rain", "Su.Commences", "C.Forms", "C.onEar", "S.Solstice",
+    "M.Heat", "G.Heat", "A.Commences", "E.Heat", "W.Dew", "A.Equinox",
+    "C.Dew", "Frost", "W.Commences", "L.Snow", "H.Snow", "W.Solstice"
+  ],
+  "Chinese": [
+    "小寒", "大寒", "立春", "雨水", "驚蟄", "春分",
+    "清明", "穀雨", "立夏", "小滿", "芒種", "夏至",
+    "小暑", "大暑", "立秋", "處暑", "白露", "秋分",
+    "寒露", "霜降", "立冬", "小雪", "大雪", "冬至",
+  ]
 }
 
 let lunarChar = "Digits";
@@ -242,6 +260,11 @@ for (let i = 0; i < LUNAR_START.length; ++i)
   LUNAR_START[i] += 689560;
 
 
+let MIN_TERM_YEAR = 1901;
+let TERM_ERRS = {"1913-7":1, "1913-9":1, "1913-17":1, "1914-13":1, "1917-7":1, "1917-12":1, "1917-15":1, "1918-13":1, "1921-12":1, "1921-15":1, "1922-13":1, "1923-16":1, "1925-12":1, "1925-15":1, "1946-7":1, "1946-9":1, "1947-13":1, "1951-13":1, "1954-12":1, "1954-15":1, "1987-15":1, "2013-2":1, "2020-22":1, "2045-1":1, "2046-2":1, "2048-0":1, "2049-22":1, "2053-22":1, "2055-3":1, "2059-3":1, "2075-2":1, "2078-1":1, "2078-15":1, "2078-22":1, "2079-2":1, "2081-0":1, "2082-1":1, "2082-22":1, "2086-22":1, "2088-3":1, "2092-3":1, "2097-8":1};
+let TERM_OFFSETS = [0.0, 14.920444788693807, 29.833051808420727, 44.758397906889044, 59.54743252787255, 74.5821308833559, 89.76342345646493, 104.92044142549231, 120.52424282149984, 135.9194333116249, 151.75938376057962, 167.0010066073415, 182.921456734612, 198.8332875519672, 214.5252410653325, 229.92145750707957, 245.75667628578304, 260.918429758073, 275.94699216997515, 291.38281326337346, 306.3828340872003, 320.959107085308, 335.92144770365934, 350.8342916501574];
+let TERM_YEAR_OFFSETS = [6.16, 6.241, 6.5, 7.055, 6.16, 6.24, 6.5, 7.055, 6.16, 6.24, 6.5, 7.055, 6.079, 6.166, 6.44, 6.999, 6.078, 6.165, 6.44, 6.999, 6.078, 6.165, 6.241, 6.999, 6.078, 6.16, 6.241, 6.5, 6.054, 6.16, 6.241, 6.5, 6.054, 6.16, 6.24, 6.5, 6.054, 6.16, 6.24, 6.5, 6.054, 6.16, 6.24, 6.475, 6.0, 6.079, 6.166, 6.44, 5.999, 6.079, 6.166, 6.44, 5.999, 6.078, 6.16, 6.4, 5.999, 6.054, 6.16, 6.241, 5.5, 6.054, 6.16, 6.241, 5.5, 6.054, 6.16, 6.24, 5.5, 6.054, 6.16, 6.24, 5.475, 6.054, 6.081, 6.2, 5.47, 6.054, 6.08, 6.2, 5.47, 6.0, 6.079, 6.166, 5.45, 5.999, 6.078, 6.16, 5.242, 5.62, 6.054, 6.16, 5.241, 5.5, 6.054, 6.16, 5.24, 5.5, 6.054, 6.16, 5.24, 5.5, 6.054, 6.16, 5.24, 5.47, 6.054, 6.081, 5.2, 5.47, 6.043, 6.08, 5.166, 5.47, 6.0, 6.079, 5.166, 5.45, 5.62, 6.078, 5.1, 5.242, 5.62, 6.054, 5.1, 5.24, 5.5, 6.054, 5.1, 5.24, 5.5, 6.054, 5.1, 5.24, 5.47, 6.054, 5.1, 5.24, 5.47, 6.054, 5.08, 5.2, 5.47, 6.043, 5.079, 5.166, 5.47, 5.998, 5.078, 5.166, 5.242, 5.62, 5.078, 5.166, 5.24, 5.62, 5.06, 5.1, 5.24, 5.5, 5.06, 5.1, 5.24, 5.5, 5.06, 5.1, 5.24, 5.47, 5.06, 5.08, 5.24, 5.47, 5.041, 5.08, 5.166, 5.47, 5.041, 5.078, 5.166, 5.47, 4.998, 5.078, 5.166, 5.242, 4.63, 5.078, 5.166, 5.24, 4.63, 5.06, 5.1, 5.24, 4.6, 5.06, 5.1, 5.24, 4.47, 5.06, 5.1, 5.24];
+
 // Convert Gregorian date to lunar date, as 4-tuple (y, m, d, l), where
 // l is "on" only if the year has a leap month which is m
 function greg2Lunar(gregDate) {
@@ -298,9 +321,22 @@ function date2Greg(date) {
 // Update to display a Gregorian date
 function updateGreg(gregDate) {
   let [y, m, d] = gregDate;
-  let day = (greg2Int(gregDate) + 3) % 7;
+  let int_greg = greg2Int(gregDate);
+  let day = (int_greg + 3) % 7;
   gregDateLabel.text = y + "-" + to2(m) + "-" + to2(d) +
     " (" + WEEKDAYS[day] + ")";
+  let year_idx = y - MIN_TERM_YEAR;
+  if (year_idx >= 0 && year_idx < TERM_YEAR_OFFSETS.length) {
+    let daynum = int_greg - greg2Int([y, 1, 1]) + 1
+    let term_idx = Math.floor(daynum / 15.3);
+    let term_day = Math.floor(TERM_YEAR_OFFSETS[year_idx]
+                              + TERM_OFFSETS[term_idx]);
+    if (TERM_ERRS[y + "-" + term_idx])
+      term_day += 1;
+    solarTermLabel.text = (
+      (daynum == term_day) ? TERM_NAMES[lunarChar][term_idx] : ""
+    );
+  }
 }
 
 // Update to display a lunar date

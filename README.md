@@ -8,9 +8,12 @@ calendar.
   * Set solar or lunar calendar by tapping on the dates.
   * Move to today by the button.
 
+The 24 solar term is also shown if it occurs on a day being displayed.
+
 Unluckily, some of the year names are not displayable in Versa if
 written correctly, so they are substituted with a character looking
-similar.  You're warned.
+similar.  One character of the solar terms don't have suitable
+replacement so the missing character symbol is shown.  You're warned.
 
 This is an open-source project.  The source code and latest development
 can be found at:
