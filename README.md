@@ -26,6 +26,7 @@ The latest version can be installed from the Fitbit gallery app site with:
 
 Change log
 
+  * 0.3.0: Solar term support
   * 0.2.2: Renamed as Chinese Calendar
   * 0.2.1: Flexible swipe, prevent overflow
   * 0.2.0: Chinese year name, make swipe direction natural
