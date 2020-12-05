@@ -1,26 +1,19 @@
 Chinese Calendar
 
-Display the same day in both the western (Gregorian) and Chinese lunar
-calendar.
+Display the same day in both the western (Gregorian) and Chinese lunar calendar.  The 24 solar terms are also shown if it occurs on a day being displayed.  You can move around the dates as follows:
 
   * Move forward and backward by 1 day, 7 days, 30 days or 365 days by
-    swiping on the dates.
+    swiping on the dates (hint: try diagonal swipe).
   * Set solar or lunar calendar by tapping on the dates.
   * Move to today by the button.
 
-The 24 solar term is also shown if it occurs on a day being displayed.
+Unluckily, some of the year names are not displayable in Versa if written correctly, so they are substituted with a character looking similar.  One character of the solar terms don't have suitable replacement so the missing character symbol is shown.  You're warned.
 
-Unluckily, some of the year names are not displayable in Versa if
-written correctly, so they are substituted with a character looking
-similar.  One character of the solar terms don't have suitable
-replacement so the missing character symbol is shown.  You're warned.
-
-This is an open-source project.  The source code and latest development
-can be found at:
+This is an open-source project.  The source code and latest development can be found at:
 
   https://github.com/isaacto/fitbit-ChineseCalendar
 
-The latest version can be installed from the Fitbit gallery app site with:
+The released version can be installed from the Fitbit gallery app site with:
 
   https://gallery.fitbit.com/details/5971756c-5a3c-4fb3-bbb9-b8079fde9e81
 
