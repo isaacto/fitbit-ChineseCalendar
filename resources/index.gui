@@ -15,7 +15,7 @@
   </svg>
   <svg id="gregSetter" display="none">
     <use id="gregYearTumbler" class="dateTumbler" href="#tumblerview"
-         x="2%" height="80%" width="48%">
+         x="2%" height="40%" width="48%">
       <use class="tumblerItem" href="#tumbler-item"><text>1970</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>1971</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>1972</text></use>
@@ -89,7 +89,7 @@
       <use class="tumblerItem" href="#tumbler-item"><text>2040</text></use>
     </use>
     <use id="gregMonthTumbler" class="dateTumbler" href="#tumblerview"
-         x="50%" height="80%" width="24%">
+         x="50%" height="40%" width="24%">
       <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
@@ -104,7 +104,7 @@
       <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
     </use>
     <use id="gregDateTumbler" class="dateTumbler" href="#tumblerview"
-         x="74%" height="80%" width="24%">
+         x="74%" height="40%" width="24%">
       <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
@@ -137,17 +137,20 @@
       <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>31</text></use>
     </use>
-    <use id="gregUseButton" href="#push-button" y="80%" height="20%"
-         fill="fb-green" font-family="System-Regular">
+    <use id="gregUseButton" href="#square-button-positive"
+         width="50%" y="80%" height="20%">
       <set href="#text" attributeName="class" to="mainText" />
       <set href="#text" attributeName="text-buffer" to="Use" />
-      <set href="#text" attributeName="fill" to="fb-white" />
-      <set href="#text" attributeName="y" to="10" />
+    </use>
+    <use id="gregCancelButton" href="#square-button-negative"
+         x="50%" width="50%" y="80%" height="20%">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Cancel" />
     </use>
   </svg>
   <svg id="lunarSetter" display="none">
     <use id="lunarYearTumbler" class="dateTumbler" href="#tumblerview"
-         x="0%" height="80%" width="40%">
+         x="0%" height="40%" width="40%">
       <use class="tumblerItem" href="#tumbler-item"><text>1970</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>1971</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>1972</text></use>
@@ -226,7 +229,7 @@
       <use class="tumblerItem" href="#tumbler-item"><text>**</text></use>
     </use>
     <use id="lunarMonthTumbler" class="dateTumbler" href="#tumblerview"
-         x="60%" height="80%" width="20%">
+         x="60%" height="40%" width="20%">
       <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
@@ -241,7 +244,7 @@
       <use class="tumblerItem" href="#tumbler-item"><text>12</text></use>
     </use>
     <use id="lunarDateTumbler" class="dateTumbler" href="#tumblerview"
-         x="80%" height="80%" width="20%">
+         x="80%" height="40%" width="20%">
       <use class="tumblerItem" href="#tumbler-item"><text>01</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>02</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>03</text></use>
@@ -273,12 +276,15 @@
       <use class="tumblerItem" href="#tumbler-item"><text>29</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
     </use>
-    <use id="lunarUseButton" href="#push-button" y="80%" height="20%"
-         fill="fb-green" font-family="System-Regular">
+    <use id="lunarUseButton" href="#square-button-positive"
+         width="50%" y="80%" height="20%">
       <set href="#text" attributeName="class" to="mainText" />
       <set href="#text" attributeName="text-buffer" to="Use" />
-      <set href="#text" attributeName="fill" to="fb-white" />
-      <set href="#text" attributeName="y" to="10" />
+    </use>
+    <use id="lunarCancelButton" href="#square-button-negative"
+         x="50%" width="50%" y="80%" height="20%">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Cancel" />
     </use>
   </svg>
 </svg>

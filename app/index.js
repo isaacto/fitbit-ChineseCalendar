@@ -24,6 +24,7 @@ const gregYearTumbler = document.getElementById("gregYearTumbler");
 const gregMonthTumbler = document.getElementById("gregMonthTumbler");
 const gregDateTumbler = document.getElementById("gregDateTumbler");
 const gregUseButton = document.getElementById("gregUseButton");
+const gregCancelButton = document.getElementById("gregCancelButton");
 
 const lunarSetterSect = document.getElementById("lunarSetter");
 const lunarYearTumbler = document.getElementById("lunarYearTumbler");
@@ -31,6 +32,7 @@ const lunarMonthTumbler = document.getElementById("lunarMonthTumbler");
 const lunarDateTumbler = document.getElementById("lunarDateTumbler");
 const lunarLeapTumbler = document.getElementById("lunarLeapTumbler");
 const lunarUseButton = document.getElementById("lunarUseButton");
+const lunarCancelButton = document.getElementById("lunarCancelButton");
 
 const UI_YEAR_START = 1970;
 
@@ -429,6 +431,11 @@ gregUseButton.onclick = function() {
   mainSect.style.display = "inline";
 }
 
+gregCancelButton.onclick = function() {
+  gregSetterSect.style.display = "none";
+  mainSect.style.display = "inline";
+}
+
 lunarUseButton.onclick = function() {
   let lunar = [lunarYearTumbler.value + UI_YEAR_START,
                lunarMonthTumbler.value + 1,
@@ -436,6 +443,11 @@ lunarUseButton.onclick = function() {
                lunarLeapTumbler.value];
   curr = lunar2Greg(lunar);
   updateCurr();
+  lunarSetterSect.style.display = "none";
+  mainSect.style.display = "inline";
+}
+
+lunarCancelButton.onclick = function() {
   lunarSetterSect.style.display = "none";
   mainSect.style.display = "inline";
 }
