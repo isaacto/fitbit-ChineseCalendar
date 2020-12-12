@@ -8,7 +8,7 @@
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "5971756c-5a3c-4fb3-bbb9-b8079fde9e81",
+    "appUUID": "3d2156f8-ae95-42c2-b116-06863e05ea5f",
     "appType": "app",
     "appDisplayName": "Chinese Calendar",
     "iconFile": "resources/icon.png",
