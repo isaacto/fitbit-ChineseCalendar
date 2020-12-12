@@ -28,6 +28,14 @@ const gregDateTumbler = document.getElementById("gregDateTumbler");
 const gregUseButton = document.getElementById("gregUseButton");
 const gregCancelButton = document.getElementById("gregCancelButton");
 
+const termSetterSect = document.getElementById("termSetter");
+const termYear34Toggle = document.getElementById("termYear34Toggle");
+const termYear2Tumbler = document.getElementById("termYear2Tumbler");
+const termYear1Tumbler = document.getElementById("termYear1Tumbler");
+const termNameTumbler = document.getElementById("termNameTumbler");
+const termUseButton = document.getElementById("termUseButton");
+const termCancelButton = document.getElementById("termCancelButton");
+
 const lunarSetterSect = document.getElementById("lunarSetter");
 const lunarYear34Toggle = document.getElementById("lunarYear34Toggle");
 const lunarYear2Tumbler = document.getElementById("lunarYear2Tumbler");
@@ -101,6 +109,13 @@ const TERM_NAMES = {
 
 let lunarChar = "Digits";
 
+function setupLunarChar() {
+  let termNameItems = termNameTumbler.getElementsByClassName("tumblerItem");
+  for (let idx = 0; idx < TERM_NAMES[lunarChar].length; idx++)
+    termNameItems[idx].getElementById('content').text
+      = TERM_NAMES[lunarChar][idx];
+}
+
 try {
   let saved = fs.readFileSync("settings.json", "json");
   lunarChar = saved[0];
@@ -108,6 +123,7 @@ try {
 } catch (err) {
   lunarChar = "Digits";
 }
+setupLunarChar();
 
 // Add a leading "0" to date part if needed
 function to2(s) {
@@ -410,7 +426,19 @@ mainSect.onmouseup = function(evt) {
       intCurr = LUNAR_START[LUNAR_START.length - 1];
     curr = int2Greg(intCurr);
     updateCurr();
-  } else if (inBBoxY(evt, gregDateLabel) || inBBoxY(evt, gregLabel)) {
+  } else if (inBBoxY(evt, gregLabel)) {
+    mainSect.style.display = "none";
+    let [y, m, d] = curr;
+    let y1 = y % 10;
+    y = Math.floor(y / 10)
+    let y2 = y % 10;
+    y = Math.floor(y / 10)
+    termYear34Toggle.value = y - 19;
+    termYear2Tumbler.value = y2;
+    termYear1Tumbler.value = y1;
+    termNameTumbler.value = (m - 1) * 2 + (d > 14);
+    termSetterSect.style.display = "inline";
+  } else if (inBBoxY(evt, gregDateLabel)) {
     mainSect.style.display = "none";
     let [y, m, d] = curr;
     let y1 = y % 10;
@@ -456,6 +484,26 @@ gregCancelButton.onclick = function() {
   mainSect.style.display = "inline";
 }
 
+termUseButton.onclick = function() {
+  let year = (termYear34Toggle.value + 19) * 100
+      + termYear2Tumbler.value * 10 + termYear1Tumbler.value;
+  let term_idx = termNameTumbler.value;
+  let gInt = greg2Int([year, 1, 1])
+    + Math.floor(TERM_YEAR_OFFSETS[year - MIN_TERM_YEAR]
+                 + TERM_OFFSETS[term_idx]) - 1;
+  if (TERM_ERRS[year + "-" + term_idx])
+    gInt += 1;
+  curr = int2Greg(gInt);
+  updateCurr();
+  termSetterSect.style.display = "none";
+  mainSect.style.display = "inline";
+}
+
+termCancelButton.onclick = function() {
+  termSetterSect.style.display = "none";
+  mainSect.style.display = "inline";
+}
+
 lunarUseButton.onclick = function() {
   let lunar = [(lunarYear34Toggle.value + 19) * 100
                + lunarYear2Tumbler.value * 10 + lunarYear1Tumbler.value,
@@ -478,6 +526,7 @@ messaging.peerSocket.addEventListener("message", (evt) => {
     if (!evt.data.value)
       return;
     lunarChar = evt.data.value["values"][0]["name"];
+    setupLunarChar();
     updateCurr();
   }
   saveSettings();

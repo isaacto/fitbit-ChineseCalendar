@@ -32,7 +32,15 @@
 .tumblerItem text {
   font-size: 50;
   fill: white;
-  x: 5;
+}
+
+#termNameTumbler .tumblerItem text {
+  height: 30;
+}
+
+#termNameTumbler .tumblerItem text {
+  font-size: 30;
+  text-length: 32;
 }
 
 .tumblerToggle {

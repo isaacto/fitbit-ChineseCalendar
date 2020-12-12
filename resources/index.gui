@@ -106,6 +106,77 @@
       <set href="#text" attributeName="text-buffer" to="Cancel" />
     </use>
   </svg>
+  <svg id="termSetter" display="none">
+    <use id="termYear34Toggle" class="tumblerToggle"
+         href="#tumbler-toggle-label"
+         y="40%" height="20%" x="0%" width="15%">
+      <set href="tumbler-toggle-top" attributeName="text-buffer" to="19"/>
+      <set href="tumbler-toggle-bot" attributeName="text-buffer" to="20"/>
+    </use>
+    <use id="termYear2Tumbler" class="dateTumbler" href="#tumblerview"
+         height="40%" x="15%" width="10%">
+      <use class="tumblerItem" href="#tumbler-item"><text>0</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>3</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>4</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>5</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>6</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>7</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>8</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>9</text></use>
+    </use>
+    <use id="termYear1Tumbler" class="dateTumbler" href="#tumblerview"
+         height="40%" x="25%" width="10%">
+      <use class="tumblerItem" href="#tumbler-item"><text>0</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>1</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>2</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>3</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>4</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>5</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>6</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>7</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>8</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text>9</text></use>
+    </use>
+    <use id="termNameTumbler" class="dateTumbler" href="#tumblerview"
+         height="40%" x="35%" width="65%">
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">0</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">1</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">2</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">3</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">4</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">5</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">6</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">7</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">8</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">9</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">10</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">11</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">12</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">13</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">14</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">15</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">16</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">17</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">18</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">19</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">20</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">21</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">22</text></use>
+      <use class="tumblerItem" href="#tumbler-item"><text id="content">23</text></use>
+    </use>
+    <use id="termUseButton" href="#square-button-positive"
+         width="50%" y="80%" height="20%">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Use" />
+    </use>
+    <use id="termCancelButton" href="#square-button-negative"
+         x="50%" width="50%" y="80%" height="20%">
+      <set href="#text" attributeName="class" to="mainText" />
+      <set href="#text" attributeName="text-buffer" to="Cancel" />
+    </use>
+  </svg>
   <svg id="lunarSetter" display="none">
     <use id="lunarYear34Toggle" class="tumblerToggle"
          href="#tumbler-toggle-label"
