@@ -80,10 +80,14 @@ const LEAPS = {
 
 const TERM_NAMES = {
   "Digits":  [
-    "M.Cold", "S.Cold", "Sp.Commences", "Sp.Showers", "I.Waken", "V.Equinox",
-    "B&Clear", "C.Rain", "Su.Commences", "C.Forms", "C.onEar", "S.Solstice",
-    "M.Heat", "G.Heat", "A.Commences", "E.Heat", "W.Dew", "A.Equinox",
-    "C.Dew", "Frost", "W.Commences", "L.Snow", "H.Snow", "W.Solstice"
+    "Moderate Cold", "Severe Cold", "Spring Comm.",
+    "Spring Showers", "Insects Waken", "Vernal Equinox",
+    "Bright & Clear", "Corn Rain", "Summer Comm.",
+    "Corn Forms", "Corn on Ear", "Summer Solstice",
+    "Moderate Heat", "Great Heat", "Autumn Comm.",
+    "End of Heat", "White Dew", "Autumn Equinox",
+    "Cold Dew", "Frost", "Winter Comm.",
+    "Light Snow", "Heavy Snow", "Winter Solstice"
   ],
   "Chinese": [
     "小寒", "大寒", "立春", "雨水", "驚蟄", "春分",
