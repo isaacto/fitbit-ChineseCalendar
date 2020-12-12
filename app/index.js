@@ -20,7 +20,7 @@ const lunarDateLabel = document.getElementById("lunarDate");
 const todayButton = document.getElementById("todayButton");
 
 const gregSetterSect = document.getElementById("gregSetter");
-const gregYear34Tumbler = document.getElementById("gregYear34Tumbler");
+const gregYear34Toggle = document.getElementById("gregYear34Toggle");
 const gregYear2Tumbler = document.getElementById("gregYear2Tumbler");
 const gregYear1Tumbler = document.getElementById("gregYear1Tumbler");
 const gregMonthTumbler = document.getElementById("gregMonthTumbler");
@@ -29,12 +29,12 @@ const gregUseButton = document.getElementById("gregUseButton");
 const gregCancelButton = document.getElementById("gregCancelButton");
 
 const lunarSetterSect = document.getElementById("lunarSetter");
-const lunarYear34Tumbler = document.getElementById("lunarYear34Tumbler");
+const lunarYear34Toggle = document.getElementById("lunarYear34Toggle");
 const lunarYear2Tumbler = document.getElementById("lunarYear2Tumbler");
 const lunarYear1Tumbler = document.getElementById("lunarYear1Tumbler");
 const lunarMonthTumbler = document.getElementById("lunarMonthTumbler");
 const lunarDateTumbler = document.getElementById("lunarDateTumbler");
-const lunarLeapTumbler = document.getElementById("lunarLeapTumbler");
+const lunarLeapToggle = document.getElementById("lunarLeapToggle");
 const lunarUseButton = document.getElementById("lunarUseButton");
 const lunarCancelButton = document.getElementById("lunarCancelButton");
 
@@ -417,7 +417,7 @@ mainSect.onmouseup = function(evt) {
     y = Math.floor(y / 10)
     let y2 = y % 10;
     y = Math.floor(y / 10)
-    gregYear34Tumbler.value = y - 19;
+    gregYear34Toggle.value = y - 19;
     gregYear2Tumbler.value = y2;
     gregYear1Tumbler.value = y1;
     gregMonthTumbler.value = m - 1;
@@ -430,21 +430,22 @@ mainSect.onmouseup = function(evt) {
     y = Math.floor(y / 10)
     let y2 = y % 10;
     y = Math.floor(y / 10)
-    lunarYear34Tumbler.value = y - 19;
+    lunarYear34Toggle.value = y - 19;
     lunarYear2Tumbler.value = y2;
     lunarYear1Tumbler.value = y1;
     lunarMonthTumbler.value = m - 1;
     lunarDateTumbler.value = d - 1;
-    lunarLeapTumbler.value = l ? 1 : 0;
+    lunarLeapToggle.value = l ? 1 : 0;
     lunarSetterSect.style.display = "inline";
   }
 };
 
 gregUseButton.onclick = function() {
-  curr = [(gregYear34Tumbler.value % 2 + 19) * 100
+  curr = [(gregYear34Toggle.value + 19) * 100
           + gregYear2Tumbler.value * 10 + gregYear1Tumbler.value,
           gregMonthTumbler.value + 1,
           gregDateTumbler.value + 1];
+  curr = int2Greg(greg2Int(curr));
   updateCurr();
   gregSetterSect.style.display = "none";
   mainSect.style.display = "inline";
@@ -456,11 +457,11 @@ gregCancelButton.onclick = function() {
 }
 
 lunarUseButton.onclick = function() {
-  let lunar = [(lunarYear34Tumbler.value % 2 + 19) * 100
+  let lunar = [(lunarYear34Toggle.value + 19) * 100
                + lunarYear2Tumbler.value * 10 + lunarYear1Tumbler.value,
                lunarMonthTumbler.value + 1,
                lunarDateTumbler.value + 1,
-               lunarLeapTumbler.value % 2];
+               lunarLeapToggle.value];
   curr = lunar2Greg(lunar);
   updateCurr();
   lunarSetterSect.style.display = "none";
