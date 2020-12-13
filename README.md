@@ -2,9 +2,7 @@ Chinese Calendar
 
 Display the same day in both the western (Gregorian) and Chinese lunar calendar.  The 24 solar terms are also shown if it occurs on a day being displayed.  You can move around the dates as follows:
 
-  * Move forward and backward by 1 day, 7 days, 30 days or 365 days by
-    swiping on the dates (hint: try diagonal swipe apart from
-    horizontal/vertical).
+  * Move forward and backward by 1 day, 7 days, 30 days or 365 days by swiping on the dates (hint: try diagonal swipe apart from horizontal/vertical).
   * Move to a solar or lunar calendar date by tapping on the dates.
   * Move to a solar term date by tapping on the solar label.
   * Move to today by the button of that name.
