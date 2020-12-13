@@ -1,16 +1,16 @@
 <svg>
   <svg id="main" pointer-events="visible">
     <rect id="background" />
-    <text id="gregLabel" class="defaultText" x="5%" y="40">Solar</text>
-    <text id="solarTerm" class="defaultText" x="99%" y="40" text-anchor="end"></text>
-    <text id="gregDate" class="mainText" x="5%" y="15%+40"/>
-    <text id="lunarLabel" class="defaultText" x="5%" y="35%+40">Lunar</text>
-    <text id="lunarDate" class="mainText" x="5%" y="50%+40"/>
-    <use id="todayButton" href="#push-button" y="80%" height="20%" fill="fb-green" font-family="System-Regular">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Today" />
+    <text id="gregLabel" class="defaultText" x="5%" y="60">Solar</text>
+    <text id="solarTerm" class="defaultText" x="95%" y="60" text-anchor="end"></text>
+    <text id="gregDate" class="mainText" x="5%" y="15%+60"/>
+    <text id="lunarLabel" class="defaultText" x="5%" y="35%+60">Lunar</text>
+    <text id="lunarDate" class="mainText" x="5%" y="50%+60"/>
+    <use id="todayButton" href="#text-button"
+         class="text-button bottom application-fill"
+         y="80%" height="20%">
       <set href="#text" attributeName="fill" to="fb-white" />
-      <set href="#text" attributeName="y" to="10" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
   </svg>
   <svg id="gregSetter" display="none">
@@ -95,15 +95,15 @@
       <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>31</text></use>
     </use>
-    <use id="gregUseButton" href="#square-button-positive"
+    <use id="gregUseButton" href="#text-button"
+         class="text-button left application-fill useButton"
          width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Use" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
-    <use id="gregCancelButton" href="#square-button-negative"
+    <use id="gregCancelButton" href="#text-button"
+         class="text-button right secondary application-fill cancelButton"
          x="50%" width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Cancel" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
   </svg>
   <svg id="termSetter" display="none">
@@ -166,15 +166,15 @@
       <use class="tumblerItem" href="#tumbler-item"><text id="content">22</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text id="content">23</text></use>
     </use>
-    <use id="termUseButton" href="#square-button-positive"
+    <use id="termUseButton" href="#text-button"
+         class="text-button left application-fill useButton"
          width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Use" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
-    <use id="termCancelButton" href="#square-button-negative"
+    <use id="termCancelButton" href="#text-button"
+         class="text-button right secondary application-fill cancelButton"
          x="50%" width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Cancel" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
   </svg>
   <svg id="lunarSetter" display="none">
@@ -264,15 +264,15 @@
       <use class="tumblerItem" href="#tumbler-item"><text>29</text></use>
       <use class="tumblerItem" href="#tumbler-item"><text>30</text></use>
     </use>
-    <use id="lunarUseButton" href="#square-button-positive"
+    <use id="lunarUseButton" href="#text-button"
+         class="text-button left application-fill useButton"
          width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Use" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
-    <use id="lunarCancelButton" href="#square-button-negative"
+    <use id="lunarCancelButton" href="#text-button"
+         class="text-button right secondary application-fill cancelButton"
          x="50%" width="50%" y="80%" height="20%">
-      <set href="#text" attributeName="class" to="mainText" />
-      <set href="#text" attributeName="text-buffer" to="Cancel" />
+      <set href="#text" attributeName="y" to="40" />
     </use>
   </svg>
 </svg>

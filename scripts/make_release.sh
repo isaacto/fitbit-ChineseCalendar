@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -e '/appUUID/s/"[^"]*",/"5971756c-5a3c-4fb3-bbb9-b8079fde9e81",/' \
+sed -e '/appUUID/s/"[^"]*",/"8f7f02cb-ac2d-46f3-9ddc-1a32f60b9ce6",/' \
     -i package.json
 npx fitbit-build
 git checkout package.json

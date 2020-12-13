@@ -13,6 +13,30 @@
   fill: white;
 }
 
+#todayButton #text {
+  text-buffer: "Today";
+}
+
+.application-fill {
+  fill: fb-green;
+}
+
+.foreground-fill {
+  fill: fb-white;
+}
+
+.background-fill {
+  fill: fb-black;
+}
+
+.useButton #text {
+    text-buffer: "Use";
+}
+
+.cancelButton #text {
+    text-buffer: "Cancel";
+}
+
 .mainText {
   font-size: 32;
   font-family: System-Regular;

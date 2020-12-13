@@ -4,20 +4,19 @@
   "private": true,
   "license": "Apache",
   "devDependencies": {
-    "@fitbit/sdk": "~4.2.0",
+    "@fitbit/sdk": "~5.0.0",
     "@fitbit/sdk-cli": "^1.7.3"
   },
   "fitbit": {
-    "appUUID": "3d2156f8-ae95-42c2-b116-06863e05ea5f",
+    "appUUID": "4fa16937-7397-44b1-bec2-e905f41fa772",
     "appType": "app",
     "appDisplayName": "Chinese Calendar",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [],
     "buildTargets": [
-      "mira",
-      "meson",
-      "gemini"
+      "atlas",
+      "vulcan"
     ],
     "i18n": {},
     "defaultLanguage": "en-US"
