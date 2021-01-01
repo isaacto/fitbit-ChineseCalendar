@@ -15,7 +15,8 @@ This is an open-source project.  The source code and latest development can be f
 
 The released version can be installed from the Fitbit gallery app site with:
 
-  https://gallery.fitbit.com/details/5971756c-5a3c-4fb3-bbb9-b8079fde9e81
+  * SDK 4.2: https://gallery.fitbit.com/details/5971756c-5a3c-4fb3-bbb9-b8079fde9e81
+  * SDK 5.0: https://gallery.fitbit.com/details/8f7f02cb-ac2d-46f3-9ddc-1a32f60b9ce6
 
 The development version can be installed from the Fitbit gallery app site with:
 
