@@ -19,10 +19,12 @@ The released version can be installed from the Fitbit gallery app site with:
 
 The development version can be installed from the Fitbit gallery app site with:
 
-  https://gallery.fitbit.com/details/3d2156f8-ae95-42c2-b116-06863e05ea5f
+  * SDK 4.2: https://gallery.fitbit.com/details/3d2156f8-ae95-42c2-b116-06863e05ea5f
+  * SDK 5.0: https://gallery.fitbit.com/details/4fa16937-7397-44b1-bec2-e905f41fa772
 
 Change log
 
+  * 0.5.0: Add Fitbit SDK 5.0 support
   * 0.4.0: Show full solar term string; allow moving to any date supported directly; allow moving to a solar term
   * 0.3.0: Solar term support
   * 0.2.2: Renamed as Chinese Calendar
