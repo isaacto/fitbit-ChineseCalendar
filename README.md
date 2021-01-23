@@ -1,6 +1,10 @@
 Chinese Calendar
 
-Display the same day in both the western (Gregorian) and Chinese lunar calendar.  The 24 solar terms are also shown if it occurs on a day being displayed.  You can move around the dates as follows:
+As many Chinese, most watches do not give all the information we need about the calendar.  They won't tell when is Winter Solstice.  They won't tell when is our new year.  They won't tell when is Mid-Autumn.  But with smart watches that we can write our app and use ones written by others, we get a chance.
+
+This app displays the same day in both the western (Gregorian) and Chinese lunar calendar.  The 24 solar terms are also shown if it occurs on a day being displayed.  You can choose to use Chinese characters using the app settings in the mobile phone.
+
+You can move around the dates as follows:
 
   * Move forward and backward by 1 day, 7 days, 30 days or 365 days by swiping on the dates (hint: try diagonal swipe apart from horizontal/vertical).
   * Move to a solar or lunar calendar date by tapping on the dates.
